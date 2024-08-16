@@ -1,0 +1,473 @@
+@font-face {
+    font-family: 'Poppins_SemiBold';
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Specifies that this font-face is for the SemiBold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins_Regular';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400; /* Specifies that this font-face is for the Regular weight */
+    font-style: normal;
+}
+
+
+
+
+.poppins-semibold {
+    font-family: "Poppins_SemiBold", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.ArrowFlex div{
+            width: 100%;
+    }
+    
+    .ArrowFlex svg{
+            width: auto;
+    }
+
+
+
+
+
+
+
+body{
+    font-family: "Poppins_Regular", sans-serif;
+    margin: 0;
+}
+
+.WhiteColor{
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.FlexRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.EqualWidth .FlexRow{
+    white-space: nowrap;
+}
+
+.SpaceBetCenter{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ContentWidth{
+    padding: 15px 10%;
+}
+
+.TopContact a{
+    color: white;
+    text-decoration: none;
+}
+
+.TopContact img{
+    margin-right: 5px;
+
+}
+header img,
+ul li
+{
+    cursor: pointer;
+}
+
+ul li{
+    margin-right: 15px;
+}
+
+header ul li:nth-child(1){
+    margin-left: 0;
+}
+
+.EqualWidth{
+    width: calc(100% / 3);    
+}
+
+.FlexLeft{
+    justify-content: left;
+}
+
+.FlexCenter{
+    justify-content: center;
+}
+
+.FlexRight{
+    justify-content: right;
+}
+
+.BgColor{
+    background: #010114;
+    color: white;
+}
+
+.Search{
+    border-bottom: 2px solid #EDEDED;
+    position: relative;
+}
+
+.SearchIcon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+}
+
+.InputSearch{
+    height: 45px;
+    padding-left: 45px;
+    border: 1px solid #CED4DA;
+}
+
+input::placeholder {
+    color: #B1B1B1;
+    font-size: 14px;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.LabelText{
+    font-size: 20px;
+}
+.LabelText p{
+    margin: 0;
+}
+
+.MainContentLabel{
+    font-size: 36px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.MainImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.MainMenu{
+    width: max-content;
+    margin-right: 5%;
+
+}
+.MainMenu .ParentRelative{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins_SemiBold", sans-serif;
+    padding: 0 20px;
+    max-width: 90%;
+    width: max-content;
+}
+
+
+
+.MainMenu, .ChildSecond{
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 30px;
+    /* white-space: nowrap; */
+    
+}
+
+.ParentRelative{
+    position: relative;
+}
+
+.MenuBG{
+    background: #F1F1F1;
+}
+
+.ChildSecond{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    max-width: 90%;
+}
+
+
+
+.category, 
+.active-category {
+    color: black; 
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    height: 105px;
+}
+
+.ChildSecond .category{
+    /* height: 80px; */
+    
+    align-items: center;
+}
+
+.arrow{
+    margin-left: 15px;
+}
+
+header .EqualWidth  .FlexRow {
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.MobileHeader{
+    display: none;
+}
+
+.ArrowFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+@media only screen and (max-device-width: 767px) { 
+    .EqualWidth , .Search, .MainImg {
+        display:none;
+    }
+    .MobileHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .BorderBTN{
+        border: 1px solid white;
+        padding: 10px;
+    }
+    .ContentWidth {
+        padding: 15px 7%;
+    }
+    .MainMenu{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .MenuBG {
+        background: none;
+    }
+    .category {
+        height: 65px;
+    }
+    .arrow{
+        display: block !important;
+        transform: rotate(90deg);
+    }
+    .no-subcategories .arrow{
+        display: none !important;
+    }
+
+    .category{
+        background: #F2F2F3;
+        margin-bottom: 25px;
+        
+    }
+    .ArrowFlex{
+        padding: 20px;
+        color: rgb(0, 0, 0) !important;
+    }
+    
+
+    .MenuLabel.active-category {
+        height: 100%;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .active-category {
+        height: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .active-category .ChildSecond {
+        position: relative;
+        left: 0;
+        padding: 0px 10px;
+        background: #f2f2f3;
+    }
+
+    .MainMenu .ParentRelative {
+        padding: 0;
+        max-width: none;
+        width: auto;
+    }
+    .MenuLabel.active-category > .ArrowFlex{
+        background: black;
+        color: white !important;
+        
+    }
+
+    .MenuLabel.category.active-category{
+        background: #ffffff;
+        border: 1px solid black;
+        
+    }
+
+    .MenuLabel > .ChildSecond > .category {
+        padding: 0;
+    }
+
+    .ChildSecond .category{
+        background: #ffffff;
+        height: auto;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 5px 15px;
+        padding-right: 0;
+    }
+
+    .ChildSecond .category.active-category{
+        height: auto;
+        background: #F2F2F3 !important;
+    }
+
+    
+
+    .MenuLabel.active-category > .ChildSecond.MenuBG{
+        background: white;
+        padding: 0;
+    }
+
+    .ChildSecond {
+        width: 100%;
+        white-space: normal;
+        max-width: none;
+    }
+    
+    /* .MenuLabel.active-category > .ArrowFlex svg{
+        transform: rotate(270deg);
+    } */
+    
+    
+    
+    .MenuLabel.no-subcategories.active-category > .ArrowFlex {
+         background: black !important; 
+    }
+    
+    .MenuLabel.active-category > .ArrowFlex svg path{
+         stroke: white !important;
+    }
+    
+    /* .ChildSecond .active-category > .ArrowFlex svg{
+         transform: rotate(270deg);
+    } */
+    
+    .ChildSecond .category.no-subcategories{
+        background:none !important;
+    }
+    
+    
+
+
+
+    .ChildSecond .ArrowFlex{
+        padding: 5px 0;
+    }
+
+    .ChildSecond .ChildSecond.active-category{
+        border: none;
+    }
+
+    .active-category .category {
+        background: #F2F2F3;
+    }
+
+    .active-category > .ChildSecond.MenuBG{
+        padding: 0px 10px;
+        background: #F2F2F3;
+    }
+
+    .MenuLabel.active-category > .ChildSecond > .category {
+        background: white;
+    }
+    .active-category > .ArrowFlex{
+        padding: 5px 10px;
+        background: #F2F2F3;
+    }
+
+    .MenuLabel.active-category > .ArrowFlex{
+        padding: 20px;
+        background: black;
+    }
+
+    .active-category .ChildSecond{
+        background: #F2F2F3;
+    }
+
+    .MenuLabel.active-category > .ChildSecond{
+        background: white;
+    }
+    
+    .no-subcategories.active-category > .ArrowFlex{
+        background: unset;
+    }
+
+
+    .category:not(.active-category) .ArrowFlex  svg{
+        transform: rotate(90deg) ;
+    }
+
+    .arrow{
+        transform: rotate(90deg) ;
+    }
+
+    .arrow.rotate-270{
+        transform: rotate(270deg) ;
+    }   
+ }
+ 
+ 
+ @media only screen and (min-device-width: 768px) and (max-device-width: 990px) { 
+     .MainMenu, .ChildSecond {
+         font-size: 0.75rem;
+     }
+ }
+ 
+ @media only screen and (min-device-width: 991px) and (max-device-width: 1200px) { 
+     .MainMenu, .ChildSecond {
+         font-size: 1rem;
+     }
+     
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
